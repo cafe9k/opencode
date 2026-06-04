@@ -1,0 +1,30 @@
+specs/qa-assistant/README.md
+  s_da578d1500f18e::t_cba69cc6fed4fa 1-29
+specs/qa-assistant/planning/qa-assistant-v0.1.md
+  s_da578d1500f18e::t_c2970debffb64e 1-205,207-252,254-1052
+  s_da578d1500f18e::t_0293ffc1257fe9 206,253
+specs/qa-assistant/operations/sync-upstream.md
+  s_da578d1500f18e::t_ef31a941e1234d 1-22
+specs/qa-assistant/AGENTS.md
+  s_da578d1500f18e::t_2b4a5836a3b219 16
+  s_da578d1500f18e::t_314d153e249f4d 25
+specs/qa-assistant/learning/opencode-learning-path.md
+  s_da578d1500f18e::t_ca9f3e9f3677d0 269
+  s_da578d1500f18e::t_404a4ecdbcd986 1-268,270-734
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10-trip",
+  "base_commit_sha": "51d266d7f0ea84674de0ceb7b1f074c06f8474e5",
+  "prompts": {},
+  "sessions": {
+    "s_da578d1500f18e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e9222-89eb-7671-9abf-d32d6253daa6",
+        "model": "gpt-5.5"
+      },
+      "human_author": "qingqing.zhang <qingqing.zhang@trip.com>"
+    }
+  }
+}
