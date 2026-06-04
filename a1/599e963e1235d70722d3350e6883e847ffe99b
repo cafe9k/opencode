@@ -1,0 +1,21 @@
+specs/qa-assistant/AGENTS.md
+  s_da578d1500f18e::t_da876f23bf2c27 1-68
+specs/qa-assistant/qa-assistant-v0.1.md
+  s_da578d1500f18e::t_e9e71f29692385 1-1047
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10-trip",
+  "base_commit_sha": "a1599e963e1235d70722d3350e6883e847ffe99b",
+  "prompts": {},
+  "sessions": {
+    "s_da578d1500f18e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e9222-89eb-7671-9abf-d32d6253daa6",
+        "model": "gpt-5.5"
+      },
+      "human_author": "qingqing.zhang <qingqing.zhang@trip.com>"
+    }
+  }
+}
