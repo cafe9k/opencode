@@ -141,13 +141,18 @@ git diff --check
 
 ```text
 specs/qa-assistant/
-  qa-assistant-v0.1.md
-  architecture.md
-  sync-upstream.md
-  testcase-field-spec.md
-  quality-rubric.md
-  prompt-rules.md
-  release-checklist.md
+  planning/
+    qa-assistant-v0.1.md
+  architecture/
+    architecture.md
+  operations/
+    sync-upstream.md
+    release-checklist.md
+  standards/
+    testcase-field-spec.md
+    quality-rubric.md
+  prompts/
+    prompt-rules.md
 examples/qa-assistant/
   requirements/
   expected-cases/
@@ -156,8 +161,8 @@ examples/qa-assistant/
 文档规则：
 
 - 官方文档只在必要处增加短链接，不直接嵌入大段二开方案。
-- 内部方案、样例、质量标准和排期放在 `specs/qa-assistant/` 下。
-- 每次官方同步后，在 `sync-upstream.md` 记录官方 commit、冲突文件、解决方式和后续风险。
+- 内部方案、样例、质量标准和排期放在 `specs/qa-assistant/` 的分类子目录下。
+- 每次官方同步后，在 `operations/sync-upstream.md` 记录官方 commit、冲突文件、解决方式和后续风险。
 - prompt、schema、Excel 模板和灰度反馈都视为二开资产，避免放入官方通用目录。
 - 若未来准备向官方贡献通用能力，再单独抽取为小 PR，不把内部业务文档一并提交。
 
@@ -198,7 +203,7 @@ packages/opencode/
 - `packages/qa-assistant` 拥有需求解析、schema、测试用例生成、导出、历史记录和 QA Agent prompt。
 - OpenCode 官方 package 只提供 runtime、tool registry、session、model 调用、文件读取等基础能力。
 - 桌面端 UI 如果必须进入现有 Electron app，应按页面或路由集中接入，不改散落组件。
-- 所有 QA 专属配置使用独立 namespace，例如 `qa_case_generator`，避免污染官方配置结构。
+- 所有 QA 专属配置使用独立 namespace，例如 `qa_assistant`，避免污染官方配置结构。
 - 数据库表使用独立前缀或独立 SQLite 文件，避免和官方 session、event、project 表耦合。
 
 依赖方向：
@@ -245,7 +250,7 @@ QA 功能默认应可关闭。
 
 ```json
 {
-  "qa_case_generator": {
+  "qa_assistant": {
     "enabled": true,
     "storage_path": "~/.opencode/qa-assistant",
     "max_code_files": 80,
@@ -301,7 +306,7 @@ README*.md
 - 从 package 目录运行 `bun typecheck`。
 - 运行 CLI 冒烟用例：示例需求文档 + 示例仓库 + 导出 xlsx/csv。
 - 打开桌面端检查项目页、需求页、生成页、用例页是否可进入。
-- 更新 `specs/qa-assistant/sync-upstream.md`。
+- 更新 `specs/qa-assistant/operations/sync-upstream.md`。
 - 把冲突原因沉淀为架构调整事项，减少下一次同类冲突。
 
 同步记录模板：

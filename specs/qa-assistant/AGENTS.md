@@ -13,7 +13,7 @@ These instructions apply to all work under `specs/qa-assistant/` and to future i
 - Keep QA-specific plans, architecture, prompts, schemas, examples, sync notes, and release checklists under `specs/qa-assistant/` unless there is a strong reason to place them elsewhere.
 - Do not rewrite top-level OpenCode documentation to carry QA-specific product details.
 - If top-level documentation needs to mention this project, add only a short pointer to the QA-specific document.
-- Record upstream sync decisions in `specs/qa-assistant/sync-upstream.md` when synchronization work happens.
+- Record upstream sync decisions in `specs/qa-assistant/operations/sync-upstream.md` when synchronization work happens.
 
 ## Architecture Rules
 
@@ -22,7 +22,7 @@ These instructions apply to all work under `specs/qa-assistant/` and to future i
 - If OpenCode integration is necessary, use plugins, agent tools, public APIs, or a thin adapter.
 - Do not add QA-specific logic directly to session runner, model execution, file tools, or shared server routes.
 - Do not make OpenCode core depend on QA Assistant modules.
-- Use a dedicated configuration namespace such as `qa_case_generator`.
+- Use a dedicated configuration namespace such as `qa_assistant`.
 - Keep storage isolated, either in a dedicated SQLite database or clearly prefixed tables.
 
 ## Upstream Sync Rules
@@ -65,4 +65,3 @@ These instructions apply to all work under `specs/qa-assistant/` and to future i
 - Restrict repository reads to the user-selected repo root.
 - Restrict requirement document reads to user-selected files.
 - Keep generated exports in explicit user-selected or configured output locations.
-
